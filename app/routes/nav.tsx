@@ -11,6 +11,10 @@ export default function NavBar() {
             setIsScrolled(window.scrollY > threshold);
         };
 
+        // Check the initial scroll position when the component mounts
+        handleScroll();
+
+        // Add the event listener for subsequent scrolls
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
@@ -44,7 +48,7 @@ export default function NavBar() {
             link.removeEventListener('click', handleScroll as EventListener);
           });
         };
-      }, []);
+    }, []);
     return (
         <div className={`fixed top-0 left-0 w-full z-10 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +61,7 @@ export default function NavBar() {
         <div className="hidden md:block ml-10">
             <div className="ml-10 flex items-center space-x-4">
                 <Link
-                to="/"
+                to="/#about"
                 className="text-black hover:text-green-800 text-base font-medium nav-link"
                 >
                 About

@@ -59,7 +59,8 @@ export default function Projects() {
         <p>Voting Made Easy walks viewers through the importance of voting, teaches more about the backgrounds behind each presidential and vice-presidential candidate, and lists ways in which people can vote during COVID-19. </p>
         
         <div className="flex flex-wrap gap-2 mt-4">
-          <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">Figma</span>
+            <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">HTML</span>
+            <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">CSS</span>
         </div>
         <a href = "https://github.com/saharmaisha/votingmadeeasy.github.io"><img src="images/voting.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Voting Made Easy project" /></a>
       </div>

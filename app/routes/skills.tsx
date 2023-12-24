@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Skills = () => {
     const skills = {
         'CODING LANGUAGES': ['Python', 'Java', 'Scala', 'Typescript', 'SQL', 'JavaScript', 'C', 'HTML', 'CSS'],

@@ -1,14 +1,8 @@
-import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAmazon, faGoogle} from "@fortawesome/free-brands-svg-icons";
+import { faAmazon, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Experience() {
-    const [isShowing, setIsShowing] = useState(false);
-
-  useEffect(() => {
-    setIsShowing(true); // Trigger the animation when the component mounts
-  }, []);
    return (
     <div className="container mx-auto px-4 py-8">
   <h1 className="text-4xl font-bold mb-12 text-center text-green-800">EXPERIENCE</h1>

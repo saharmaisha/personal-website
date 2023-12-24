@@ -18,7 +18,7 @@ export default function Projects() {
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">Google Cloud</span>
         </div>
         
-        <a href="https://github.com/SarahAsad23/SustainaBite"><img src="images/sustainabite.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="SustainABite project image" /></a>
+        <a href="https://github.com/SarahAsad23/SustainaBite"><img src="images/sustainabite.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="SustainABite project" /></a>
       </div>
     </div>
 
@@ -26,7 +26,7 @@ export default function Projects() {
     <div className="project-card mb-12 p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold text-green-800">Movie Match</h2>
       <div className="mt-4 ml-8">
-        <p>Movie Match is a platform that suggests movies tailored to your preferences and keeps a record of the films you've already seen to avoid repeating recommendations. It aims to enhance your movie-watching experience by constantly adapting to your evolving tastes.</p>
+        <p>Movie Match is a platform that suggests movies tailored to your preferences and keeps a record of the films you have already seen to avoid repeating recommendations. It aims to enhance your movie-watching experience by constantly adapting to your evolving tastes.</p>
         
         <div className="flex flex-wrap gap-2 mt-4">
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">Flask</span>
@@ -35,7 +35,7 @@ export default function Projects() {
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">HTML</span>
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">CSS</span>
         </div>
-        <a href = "https://github.com/saharmaisha/moviematch"><img src="images/moviematch.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Connection Mode project image" /></a>
+        <a href = "https://github.com/saharmaisha/moviematch"><img src="images/moviematch.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Movie match project" /></a>
       </div>
     </div>
 
@@ -48,7 +48,7 @@ export default function Projects() {
         <div className="flex flex-wrap gap-2 mt-4">
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">Figma</span>
         </div>
-        <a href = "https://www.figma.com/file/vb6OmP9aMby0I8A8hTqQu9/Team-Sushi?type=design&node-id=208-50&mode=design&t=jJn7DRqb9GKiiNMH-0"><img src="images/connectionmode.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Connection Mode project image" /></a>
+        <a href = "https://www.figma.com/file/vb6OmP9aMby0I8A8hTqQu9/Team-Sushi?type=design&node-id=208-50&mode=design&t=jJn7DRqb9GKiiNMH-0"><img src="images/connectionmode.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Connection Mode project" /></a>
       </div>
     </div>
 
@@ -61,7 +61,7 @@ export default function Projects() {
         <div className="flex flex-wrap gap-2 mt-4">
           <span className="badge bg-green-100 text-green-800 rounded-full px-3 py-1">Figma</span>
         </div>
-        <a href = "https://github.com/saharmaisha/votingmadeeasy.github.io"><img src="images/voting.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Connection Mode project image" /></a>
+        <a href = "https://github.com/saharmaisha/votingmadeeasy.github.io"><img src="images/voting.png" className="mt-4 object-contain h-36 sm:h-48 w-full" alt="Voting Made Easy project" /></a>
       </div>
     </div>
 

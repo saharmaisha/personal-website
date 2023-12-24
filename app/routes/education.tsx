@@ -1,12 +1,6 @@
-import { useState, useEffect } from 'react';
-import { AcademicCapIcon, CodeIcon, LightBulbIcon } from '@heroicons/react/outline'; // Import some icons for use
+import { AcademicCapIcon, CodeIcon} from '@heroicons/react/outline';
 
 export default function Education() {
-    const [isShowing, setIsShowing] = useState(false);
-
-  useEffect(() => {
-    setIsShowing(true); // Trigger the animation when the component mounts
-  }, []);
    return (
     <div className="container mx-auto px-4 py-8">
   <h1 className="text-4xl font-bold mb-12 text-center text-green-800">EDUCATION</h1>

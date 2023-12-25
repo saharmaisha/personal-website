@@ -1,4 +1,3 @@
-import { useOptionalUser } from "~/utils";
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import {
@@ -8,9 +7,10 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import invariant from "tiny-invariant";
-
-import { deleteNote, getNote } from "~/models/note.server";
 import { requireUserId } from "~/session.server";
+import { deleteNote, getNote } from "~/models/note.server";
+
+import { useOptionalUser } from "~/utils";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   invariant(params.noteId, "noteId not found");
@@ -35,6 +35,10 @@ export const action = async ({ params, request }: ActionFunctionArgs) => {
 export default function NoteDetailsPage() {
   const data = useLoaderData<typeof loader>();
   const user = useOptionalUser(); // Get the current user
+
+  if (!data.note || !data.note.user) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">

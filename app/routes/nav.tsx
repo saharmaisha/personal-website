@@ -1,8 +1,10 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { Link, Form } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { useOptionalUser } from "~/utils";
+
 
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);

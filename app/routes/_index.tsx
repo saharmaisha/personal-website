@@ -1,15 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import type { MetaFunction } from "@remix-run/node";
 
-import FadeIn from './fadein';
 import Education from "./education";
 import Experience from "./experience";
+import FadeIn from './fadein';
 import NavBar from "./nav";
 import Projects from './projects';
 import Skills from "./skills";
-
 import { useOptionalUser } from "~/utils";
-import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 

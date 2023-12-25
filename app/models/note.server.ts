@@ -8,6 +8,7 @@ export function getNote({ id }: Pick<Note, "id">) {
     include: {
       user: {
         select: {
+          id: true, 
           firstName: true,
           lastName: true,
         },
@@ -15,6 +16,8 @@ export function getNote({ id }: Pick<Note, "id">) {
     },
   });
 }
+
+
 
 export function getNoteListItems() {
   return prisma.note.findMany({

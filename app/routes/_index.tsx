@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import type { MetaFunction } from "@remix-run/node";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import type { MetaFunction } from "@remix-run/node";
 
 import Education from "./education";
 import Experience from "./experience";

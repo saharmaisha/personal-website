@@ -1,11 +1,10 @@
-import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Form, Link, NavLink, Outlet, useLoaderData } from "@remix-run/react";
 
 import { getNoteListItems } from "~/models/note.server";
 import { useOptionalUser } from "~/utils";
 
-export const loader = async ({ request }: LoaderFunctionArgs) => {
+export const loader = async () => {
   const noteListItems = await getNoteListItems();
   return json({ noteListItems });
 };
@@ -13,6 +12,10 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 export default function NotesPage() {
   const data = useLoaderData<typeof loader>();
   const user = useOptionalUser();
+
+  if (!data || !data.noteListItems) {
+    return <div>Loading notes...</div>;
+  }
 
   return (
     <div className="flex h-full min-h-screen flex-col">

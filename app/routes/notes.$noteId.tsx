@@ -7,9 +7,8 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import invariant from "tiny-invariant";
-import { requireUserId } from "~/session.server";
 import { deleteNote, getNote } from "~/models/note.server";
-
+import { requireUserId } from "~/session.server";
 import { useOptionalUser } from "~/utils";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
@@ -34,10 +33,10 @@ export const action = async ({ params, request }: ActionFunctionArgs) => {
 
 export default function NoteDetailsPage() {
   const data = useLoaderData<typeof loader>();
-  const user = useOptionalUser(); // Get the current user
+  const user = useOptionalUser();
 
-  if (!data.note || !data.note.user) {
-    return <div>Loading...</div>;
+  if (!data || !data.note) {
+    return <div>Loading note details...</div>; 
   }
 
   return (

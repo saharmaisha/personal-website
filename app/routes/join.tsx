@@ -41,7 +41,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
   if (typeof firstName !== 'string' || typeof lastName !== 'string') {
     return json(
-      { errors: { email: null, password: null, firstName: 'First name is required', lastName: 'Last name is required' } },
+      { errors: { email: null, password: null, firstName: null, lastName: null} },
       { status: 400 },
     );
   }

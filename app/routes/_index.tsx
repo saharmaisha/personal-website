@@ -20,7 +20,7 @@ export default function Index() {
       <NavBar />
       <FadeIn>
         <div className="flex justify-center items-center min-h-screen">
-          <section id="about" className="max-w-7xl flex flex-col sm:flex-row px-4 sm:px-6 lg:px-8 mx-auto my-auto pt-32">
+          <section id="about" className="max-w-7xl flex flex-col sm:flex-row px-4 sm:px-6 lg:px-8 mx-auto my-auto pt-14">
             <div className="text-center sm:flex-1">
               <h1 className="text-[10vw] sm:text-[5vw] font-bold">Hi there! I&apos;m Sahar 👋</h1>
               <div className="text-lg lg:text-xl text-center">
@@ -43,22 +43,22 @@ export default function Index() {
           </section>
         </div>
       </FadeIn>
-      <section id="education" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-32">
+      <section id="education" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-14">
       <FadeIn>
         <Education />
         </FadeIn>
       </section>
-      <section id="experience" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-32">
+      <section id="experience" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-14">
         <FadeIn>
           <Experience />
         </FadeIn>
       </section>
-      <section id="skills" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-32">
+      <section id="skills" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-14">
         <FadeIn>
           <Skills />
         </FadeIn>
       </section>
-      <section id="projects" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-32">
+      <section id="projects" className="max-w-7xl flex flex-col sm:flex-row lg:px-8 mx-auto pt-14">
         <FadeIn>
           <Projects />
         </FadeIn>

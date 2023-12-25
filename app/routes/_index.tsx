@@ -8,12 +8,10 @@ import FadeIn from './fadein';
 import NavBar from "./nav";
 import Projects from './projects';
 import Skills from "./skills";
-import { useOptionalUser } from "~/utils";
 
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 
 export default function Index() {
-  const user = useOptionalUser();
   return (
       <>
       <NavBar />

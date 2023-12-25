@@ -2,6 +2,7 @@ import type { ActionFunctionArgs } from "@remix-run/node";
 import { json, redirect } from "@remix-run/node";
 import { Form, useActionData } from "@remix-run/react";
 import { useEffect, useRef } from "react";
+
 import { createNote } from "~/models/note.server";
 import { requireUserId } from "~/session.server";
 
@@ -65,11 +66,9 @@ export default function NewNotePage() {
             aria-errormessage={actionData?.errors?.title ? "title-error" : undefined}
           />
         </label>
-        {actionData?.errors?.title && (
-          <div className="pt-1 text-red-700" id="title-error">
+        {actionData?.errors?.title ? <div className="pt-1 text-red-700" id="title-error">
             {actionData.errors.title}
-          </div>
-        )}
+          </div> : null}
       </div>
 
       <div>
@@ -84,11 +83,9 @@ export default function NewNotePage() {
             aria-errormessage={actionData?.errors?.body ? "body-error" : undefined}
           />
         </label>
-        {actionData?.errors?.body && (
-          <div className="pt-1 text-red-700" id="body-error">
+        {actionData?.errors?.body ? <div className="pt-1 text-red-700" id="body-error">
             {actionData.errors.body}
-          </div>
-        )}
+          </div> : null}
       </div>
 
       <div className="text-right">

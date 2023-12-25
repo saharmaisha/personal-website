@@ -7,6 +7,7 @@ import {
   useRouteError,
 } from "@remix-run/react";
 import invariant from "tiny-invariant";
+
 import { deleteNote, getNote } from "~/models/note.server";
 import { requireUserId } from "~/session.server";
 import { useOptionalUser } from "~/utils";
@@ -48,16 +49,14 @@ export default function NoteDetailsPage() {
         </p>
         <p className="mt-4 text-lg text-gray-600">{data.note.body}</p>
         <hr className="my-6 border-gray-300" />
-        {user && data.note.user.id === user.id && (
-          <Form method="post" className="text-right">
+        {user && data.note.user.id === user.id ? <Form method="post" className="text-right">
             <button
               type="submit"
               className="rounded bg-red-500 px-4 py-2 text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
             >
               Delete Post
             </button>
-          </Form>
-        )}
+          </Form> : null}
       </div>
     </div>
   );

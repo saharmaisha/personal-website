@@ -1,4 +1,5 @@
 app = "personal-website-563b"
+region = "bos"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]
@@ -8,6 +9,7 @@ allowed_public_ports = [ ]
 auto_rollback = true
 cmd = "start.sh"
 entrypoint = "sh"
+allowed_regions = ["bos"]
 
 [mounts]
 source = "data"

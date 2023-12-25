@@ -21,6 +21,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
+  const firstName = formData.get("firstName");
+  const lastName = formData.get("lastName");
   const redirectTo = safeRedirect(formData.get("redirectTo"), "/");
 
   if (!validateEmail(email)) {
@@ -33,6 +35,13 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   if (typeof password !== "string" || password.length === 0) {
     return json(
       { errors: { email: null, password: "Password is required" } },
+      { status: 400 },
+    );
+  }
+
+  if (typeof firstName !== 'string' || typeof lastName !== 'string') {
+    return json(
+      { errors: { email: null, password: null, firstName: 'First name is required', lastName: 'Last name is required' } },
       { status: 400 },
     );
   }
@@ -57,7 +66,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     );
   }
 
-  const user = await createUser(email, password);
+  const user = await createUser(email, password, firstName, lastName);
 
   return createUserSession({
     redirectTo,
@@ -88,6 +97,30 @@ export default function Join() {
     <div className="flex min-h-full flex-col justify-center">
       <div className="mx-auto w-full max-w-md px-8">
         <Form method="post" className="space-y-6">
+        <div>
+            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+              First Name
+            </label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              required
+              className="w-full rounded border border-gray-500 px-2 py-1 text-lg"
+            />
+          </div>
+          <div>
+            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+              Last Name
+            </label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              required
+              className="w-full rounded border border-gray-500 px-2 py-1 text-lg"
+            />
+          </div>
           <div>
             <label
               htmlFor="email"

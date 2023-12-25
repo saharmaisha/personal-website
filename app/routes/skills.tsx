@@ -10,7 +10,7 @@ const Skills = () => {
 
   return (
     <center>
-    <div className="w-full px-4 py-8">
+    <div className="w-full px-14 py-8">
       <h1 className="text-3xl font-bold mb-8 text-center text-green-800">SKILLS</h1>
       <div className="flex flex-col justify-center items-center gap-8">
   {Object.entries(skills).map(([category, items]) => (
